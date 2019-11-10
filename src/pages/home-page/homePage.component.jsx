@@ -2,14 +2,10 @@ import React, { Component } from "react";
 import Directory from "../../components/directory/Directory.component";
 import "./homepage.styles.scss";
 
-class HomePage extends Component {
-  render() {
-    return (
-        <div className="homepage">
+const HomePage = () =>(
+  <div className="homepage">
             <Directory/>
         </div>
-    );
-  }
-}
+)
 
 export default HomePage;
