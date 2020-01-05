@@ -28,30 +28,30 @@ class App extends React.Component {
             }
           });
           console.log(this.state);
-      });
-  }
+        });
+      }
       this.setState({ currentUser: userAuth });
 
     })
 
 
   }
-componentWillUnmount() {
-  this.unsubscribeFromAuth();
-}
-render() {
-  return (
-    <div>
-      <Header currentUser={this.state.currentUser} />
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/shop' component={ShopPage} />
-        <Route exact path='/signIn' component={SignPage} />
-      </Switch>
-    </div>
-  )
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+  render() {
+    return (
+      <div>
+        <Header currentUser={this.state.currentUser} />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/shop' component={ShopPage} />
+          <Route exact path='/signIn' component={SignPage} />
+        </Switch>
+      </div>
+    )
 
-}
+  }
 
 }
 
